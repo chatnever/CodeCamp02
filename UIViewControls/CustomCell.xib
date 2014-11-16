@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="206" id="KGk-i7-Jjw" customClass="CustomCell" customModule="UIViewControls" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGv-JP-tg6">
+                        <rect key="frame" x="8" y="10" width="411" height="111"/>
+                    </scrollView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCL-pe-8c9">
+                        <rect key="frame" x="21" y="92" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="poK-Qf-zyi"/>
+                            <constraint firstAttribute="height" constant="64" id="so5-67-uqK"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="likeButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="gip-r9-Oyg">
+                        <rect key="frame" x="318" y="124" width="32" height="32"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Like" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbl-0h-uIc">
+                        <rect key="frame" x="273" y="135" width="32" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzy-X4-cz1">
+                        <rect key="frame" x="93" y="135" width="172" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="LGv-JP-tg6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="2Ee-aA-7SQ"/>
+                    <constraint firstItem="gip-r9-Oyg" firstAttribute="leading" secondItem="Qbl-0h-uIc" secondAttribute="trailing" constant="16" id="6Lx-kd-VUI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="LGv-JP-tg6" secondAttribute="trailing" id="6ya-EG-tca"/>
+                    <constraint firstItem="TCL-pe-8c9" firstAttribute="centerY" secondItem="LGv-JP-tg6" secondAttribute="centerY" constant="57" id="Q4P-vB-3cA"/>
+                    <constraint firstItem="Bzy-X4-cz1" firstAttribute="leading" secondItem="TCL-pe-8c9" secondAttribute="trailing" constant="8" id="Tfb-GH-2ze"/>
+                    <constraint firstItem="LGv-JP-tg6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="pfj-Tc-h5j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="albumImage" destination="LGv-JP-tg6" id="Vhf-Bz-fyf"/>
+                <outlet property="likeNumber" destination="Qbl-0h-uIc" id="7IG-E3-mgB"/>
+                <outlet property="modelName" destination="Bzy-X4-cz1" id="Lkh-JU-oit"/>
+                <outlet property="portraitImage" destination="TCL-pe-8c9" id="mNJ-th-BlX"/>
+            </connections>
+            <point key="canvasLocation" x="392.5" y="451"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="likeButton.png" width="36" height="32"/>
+    </resources>
+</document>
